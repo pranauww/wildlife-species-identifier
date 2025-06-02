@@ -13,7 +13,7 @@ Before you begin, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/pranauww/wildlife-species-identifier.git
 cd team_won_website
 ```
 
@@ -24,7 +24,7 @@ cd team_won_website
 cd backend
 ```
 
-2. Create a virtual environment (recommended):
+2. Create a virtual environment (recommended but not required):
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows, use: venv\Scripts\activate
@@ -42,7 +42,7 @@ pip install tensorflow
 
 4. Download Model Files:
    - The model files (.pkl) are too large to be included in the repository
-   - Download the following files from our shared drive: [Add your shared drive link here]
+   - Download the following [trained models](https://drive.google.com/drive/u/0/folders/14Trgbjr6yKJC4dIYobDeo1w65l0gDyEi) from our shared drive.
      - svm_model.pkl
      - logistic_regression_model.pkl
      - label_encoder.pkl
@@ -80,11 +80,10 @@ team_won_website/
 │   ├── logistic_regression_model.pkl
 │   ├── label_encoder.pkl
 │   └── scaler.pkl
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── ...
-└── ...
+├── frontend/
+│   ├── src/
+│       ├── components/
+│       └── ...
 ```
 
 ## Usage
@@ -99,11 +98,3 @@ team_won_website/
 - If you encounter any issues with the model files, ensure they are properly downloaded and placed in the backend directory
 - Make sure both the backend and frontend servers are running simultaneously
 - Check the console for any error messages
-
-## Contributing
-
-[Add contribution guidelines if applicable]
-
-## License
-
-[Add license information] 
