@@ -31,7 +31,7 @@ function App() {
 
         const data = await response.json();
         console.log('Received prediction:', data); // Debug log
-        setPrediction({ species: data.prediction, confidence: 1.0 });
+        setPrediction({ species: data.prediction });
       } catch (err) {
         console.error('Error:', err); // Debug log
         setError(err.message || 'Error connecting to the server');
@@ -60,7 +60,6 @@ function App() {
         {prediction && (
           <div className="prediction">
             <p className="species">Species: {prediction.species}</p>
-            <p className="confidence">Confidence: {(prediction.confidence * 100).toFixed(1)}%</p>
           </div>
         )}
       </div>

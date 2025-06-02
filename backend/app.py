@@ -65,11 +65,11 @@ def predict():
         # Make prediction
         prediction = model.predict(scaled_features)
         
-        # Convert prediction to label
-        predicted_label = label_encoder.inverse_transform(prediction)[0]
+        # Convert numeric prediction back to common name
+        species_name = label_encoder.inverse_transform(prediction)[0]
         
-        logger.info(f"Successfully predicted label: {predicted_label}")
-        return jsonify({'prediction': predicted_label})
+        logger.info(f"Successfully predicted species: {species_name}")
+        return jsonify({'prediction': species_name})
     
     except Exception as e:
         logger.error(f"Error during prediction: {str(e)}", exc_info=True)
